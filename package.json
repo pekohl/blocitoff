@@ -1,0 +1,27 @@
+{
+  "name": "blocitoff",
+  "version": "1.0.0",
+  "description": "Bloc it off project",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pekohl/blocitoff.git"
+  },
+  "author": "Peter K",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pekohl/blocitoff/issues"
+  },
+  "homepage": "https://github.com/pekohl/blocitoff#readme",
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-contrib-clean": "^1.0.0",
+    "grunt-contrib-copy": "^0.8.2",
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt-hapi": "^0.11.0"
+  }
+}
