@@ -1,0 +1,9 @@
+{
+  "firebase": "pk-bloc-it-off",
+  "public": "public",
+  "ignore": [
+    "firebase.json",
+    "**/.*",
+    "**/node_modules/**"
+  ]
+}

@@ -1,4 +1,4 @@
-var app = angular.module("BlocItOff", ["firebase"]);
+
 
 (function() {
      function config($stateProvider, $locationProvider) {
@@ -8,6 +8,11 @@ var app = angular.module("BlocItOff", ["firebase"]);
              requireBase: false
          });
          $stateProvider
+         .state('all', {
+                 url: '/all',
+                 controller: 'AllCtrl as all',
+                 templateUrl: '/templates/all.html'
+             })
          .state('main', {
                  url: '/main',
                  controller: 'MainCtrl as main',
