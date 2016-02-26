@@ -10,12 +10,12 @@
             .state('active', {
                 url: '/active',
                 controller: 'ActiveCtrl as active',
-                templateUrl: '/app/templates/active.html'
+                templateUrl: '/templates/active.html'
             })
             .state('inactive', {
                 url: '/inactive',
                 controller: 'InactiveCtrl as inactive',
-                templateUrl: '/app/templates/inactive.html'
+                templateUrl: '/templates/inactive.html'
             });
     }
     angular
