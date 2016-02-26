@@ -1,13 +1,13 @@
 (function() {
-     function ActiveCtrl($firebaseArray, Message) {
-         this.title = "Active Tasks";
-         this.allMessages = Message.key();
-         this.Message = Message;
+	function ActiveCtrl($scope, $firebaseArray) {
 
-     }
+		var taskData = new Firebase("https://pk-bloc-it-off.firebaseio.com/");
 
+		$scope.data = $firebaseArray(taskData);
 
-    angular
-        .module('blocItOff')
-        .controller('ActiveCtrl', ActiveCtrl);
- })();
+	}
+
+	angular
+		.module('BlocItOff')
+		.controller('ActiveCtrl', ['$scope', '$firebaseArray', ActiveCtrl]);
+})();

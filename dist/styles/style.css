@@ -1,26 +1,26 @@
-.box {
-    vertical-align: middle;
-    background-color: #bdbdbd;
-    position: fixed; /* or absolute */
-    left: 50%; /* top left corner will be in middle of page*/
-    width: 600px;
-    margin-left: -300px; /* half the width, minus means moved to left */
-}
-.title {
-    text-align: center;
-    background-color: darkseagreen;
-}
+.navbar {
+     position:relative;
+     padding: 0.5rem;
+     background-color: rgba(101,18,95,0.5);
+     z-index: 1;
+ }
 
-table {
-    background-color: #d3d3d3;
-    border-collapse: collapse;
-    width: 100%;
+.navbar .links-container {
+     display: table;
+     position: absolute;
+     top: 0;
+     right: 0;
+     height: 100px;
+     color: white;
+     text-decoration: none;
+ }
+
+.navbar .links-container {
+    display: table;
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100px;
+    color:white;
+    text-decoration:none;
 }
-
-th {
-    background-color: #a8a8a8;
-}
-
-
-.center {text-align: center;}
-.right {text-align: right};
