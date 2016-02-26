@@ -6,5 +6,5 @@
 
 	angular
 		.module('BlocItOff')
-		.controller('InactiveCtrl', [InactiveCtrl]);
+		.controller('InactiveCtrl', InactiveCtrl);
 })();
