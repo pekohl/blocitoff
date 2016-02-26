@@ -18,27 +18,13 @@
     <script src="/app/scripts/controllers/ActiveCtrl.js"></script>
     <script src="/app/scripts/controllers/InactiveCtrl.js"></script>
 
-
-
+    <header class="header">
++		<h1 class="title">Current Tasks</h1>
++	</header>
 
 </head>
 
 <body>
-     <nav class="navbar">
-        <a ui-sref="landing" class="logo"></a>
-        <div class="links-container">
-            <div class="links-container">
-               <a ui-sref="collection" class="navbar-link">collection</a>
-             <a ui-sref="album" class="navbar-link">album</a>
-           </div>
-        </div>
-    </nav>
-
-    <div class="box">
-        <a ui-sref="active">Active Tasks</a>
-        <a ui-sref="completed">Completed Tasks</a>
-
-    </div>
 
     <ui-view></ui-view>
 

@@ -1,4 +1,4 @@
-(function() {
+(function () {
 	function ActiveCtrl($scope, $firebaseArray) {
 
 		var taskData = new Firebase("https://pk-bloc-it-off.firebaseio.com/");
