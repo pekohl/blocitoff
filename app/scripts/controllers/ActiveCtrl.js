@@ -1,9 +1,9 @@
 (function () {
 	function ActiveCtrl($scope, $firebaseArray) {
 
-		var taskData = new Firebase("https://pk-bloc-it-off.firebaseio.com/");
+		var ref = new Firebase("https://pk-bloc-it-off.firebaseio.com/");
 
-		$scope.data = $firebaseArray(taskData);
+		$scope.task = $firebaseArray(ref);
 
 	}
 
