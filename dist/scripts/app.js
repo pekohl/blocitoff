@@ -1,5 +1,3 @@
-
-
 (function() {
      function config($stateProvider, $locationProvider) {
          $locationProvider
@@ -8,18 +6,18 @@
              requireBase: false
          });
          $stateProvider
-         .state('all', {
-                 url: '/all',
-                 controller: 'AllCtrl as all',
+         .state('active', {
+                 url: '/active',
+                 controller: 'ActiveCtrl as active',
                  templateUrl: '/templates/all.html'
              })
-         .state('main', {
-                 url: '/main',
-                 controller: 'MainCtrl as main',
+         .state('inactive', {
+                 url: '/inactive',
+                 controller: 'InactiveCtrl as inactive',
                  templateUrl: '/templates/main.html'
          });
      }
     angular
-        .module('BlocItOff', ['ui.router'], ["firebase"])
+        .module('BlocItOff', ['ui.router', 'firebase'])
         .config(config);
  })();
