@@ -1,9 +1,27 @@
 (function () {
 	function ActiveCtrl($scope, $firebaseArray) {
 
-		var ref = new Firebase("https://pk-bloc-it-off.firebaseio.com/");
+		var rootRef = new Firebase("https://pk-bloc-it-off.firebaseio.com/");
 
-		$scope.task = $firebaseArray(ref);
+		$scope.tasks = $firebaseArray(rootRef);
+        $scope.newTask = {value:'', priority:''};
+        $scope.currentTask = null;
+
+//        var getTasks = function() {
+//            return tasks;
+//        };
+//
+//        var addTask = function(task) {
+//            items.$add(item);
+//        };
+//
+//        var updateTask = function(id){
+//            tasks.$save(id);
+//        };
+//
+//        var removeTask = function (id){
+//            tasks.remove(id);
+//        };
 
 	}
 
