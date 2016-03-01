@@ -9,12 +9,14 @@ header h1 {
 	font-size: 2em;
 }
 
+/*
 html, body {
 	font-family: 'Open Sans';
 	background-color: rgb(215, 216, 215);
 	margin: 0;
 	padding: 0;
 }
+*/
 
 .box {
     vertical-align: middle;
@@ -24,4 +26,19 @@ html, body {
     min-height: 500px;
     width: 600px;
     margin-left: -300px; /* half the width, minus means moved to left */
+}
+
+table {
+	width: 100%;
+}
+
+tr {
+	height: 4em;
+	text-indent: 2em;
+}
+
+.tasks-active-row {
+	background-color: rgb(241, 241, 241);
+	font-size: 1em;
+	padding: 1em;
 }

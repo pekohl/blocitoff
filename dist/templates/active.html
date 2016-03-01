@@ -1,25 +1,21 @@
 <section class="active" ng-controller="ActiveCtrl as active">
     <div class="tasks-active">
-        <table class="tasks-active-table">
-            <tr class="tasks-active-row" ng-repeat="task in active.tasks">      <td class="tasks-active-data"> {{task.description | json }}     </td>
-                <th>task</th>
-                <th>priority</th>
-            </tr>
-            <tr>
-                <th>Task</th>
-                <th>Priority</th>
-            </tr>
-        </table>
-    </div>
-    <div>
-        <input type="text"
-               id="txtNewMessage"
-               class="form-control"
-               placeholder="new task">
-        <input type="text"
-               id="txtNewMessagePriority"
-               class="form-control"
-               placeholder="Priority">
+
+        <form>
+            <div class="add-task-form">
+                <div class="input">
+                    <input type="text"  ng-model="active.newTask.description" class="form-input-description active-task-data" placeholder="Enter New Task">
+                    <select class="priority-levels" ng-model="active.newTask.priority">
+                        <option value="" disabled selected>Select Priority</option>
+                        <option value="High">High</option>
+                        <option value="Medium">Medium</option>
+                        <option value="Low">Low</option>
+                    </select>
+                </div>
+                <button type="submit" class="button" ng-click="active.addTask(input)">Add</button>
+            </div>
+        </form>
 
     </div>
+
 </section>
