@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <section class="active" ng-controller="ActiveCtrl as active">
     <div class="tasks-active">
 
@@ -11,8 +12,9 @@
                         <option value="Medium">Medium</option>
                         <option value="Low">Low</option>
                     </select>
+                    <button type="submit" class="button" ng-click="active.addTask(input)">Add</button>
                 </div>
-                <button type="submit" class="button" ng-click="active.addTask(input)">Add</button>
+
             </div>
         </form>
 

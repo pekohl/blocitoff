@@ -1,7 +1,7 @@
 (function () {
     'use strict';
 
-	function ActiveCtrl($scope, $firebaseArray) {
+	function ActiveCtrl($scope, $firebaseArray, $firebaseObject) {
 
 		var rootRef = new Firebase("https://pk-bloc-it-off.firebaseio.com/");
 
@@ -39,5 +39,5 @@
 
 	angular
 		.module('BlocItOff')
-		.controller('ActiveCtrl', ['$scope', '$firebaseArray', ActiveCtrl]);
+		.controller('ActiveCtrl', ['$scope', '$firebaseArray',  '$firebaseObject', ActiveCtrl]);
 })();
