@@ -1,4 +1,5 @@
 (function () {
+    'use strict';
     function config($stateProvider, $locationProvider) {
         $locationProvider
             .html5Mode({

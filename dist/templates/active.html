@@ -2,21 +2,34 @@
 <section class="active" ng-controller="ActiveCtrl as active">
     <div class="tasks-active">
 
-        <form>
+        <form ng-submit="addTask()">
             <div class="add-task-form">
                 <div class="input">
-                    <input type="text"  ng-model="active.newTask.description" class="form-input-description active-task-data" placeholder="Enter New Task">
-                    <select class="priority-levels" ng-model="active.newTask.priority">
+                    <input type="text"  ng-model="newTaskText" class="form-input-description active-task-data" placeholder="Enter New Task">
+                    <select class="priority-levels" ng-model="newTaskPriority">
                         <option value="" disabled selected>Select Priority</option>
                         <option value="High">High</option>
                         <option value="Medium">Medium</option>
                         <option value="Low">Low</option>
                     </select>
-                    <button type="submit" class="button" ng-click="active.addTask(input)">Add</button>
+                    <button type="submit" class="button">Add</button>
                 </div>
-
             </div>
         </form>
+<!--
+        <form class="add-task-form" ng-submit="addTask()">
+                <div class="input">
+                    <input type="text"  ng-model="newTaskText" class="form-input-description active-task-data" placeholder="Enter New Task">
+                    <select class="priority-levels" ng-model="newTaskPriority">
+                        <option value="" disabled selected>Select Priority</option>
+                        <option value="High">High</option>
+                        <option value="Medium">Medium</option>
+                        <option value="Low">Low</option>
+                    </select>
+                    <button type="submit" class="button">Add</button>
+                </div>
+        </form>
+-->
 
     </div>
 
