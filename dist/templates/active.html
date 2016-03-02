@@ -1,7 +1,5 @@
 <!DOCTYPE html>
-<section class="active" ng-controller="ActiveCtrl as active">
-    <div class="tasks-active">
-
+<section class="task-entry">
         <form ng-submit="addTask()">
             <div class="add-task-form">
                 <div class="input">
@@ -16,6 +14,7 @@
                 </div>
             </div>
         </form>
+</section>
 <!--
         <form class="add-task-form" ng-submit="addTask()">
                 <div class="input">
@@ -30,6 +29,18 @@
                 </div>
         </form>
 -->
+<section class="activeTasks" ng-controller="ActiveCtrl as active">
+    <div class="tasks-active">
+        <table class="table-task">
+        <tr id="table-header">
+            <th>Task</th>
+            <th>Date</th>
+        </tr>
+        <tr ng-repeat="task in tasks">
+            <td> {{ task.text }} </td>
+            <td id="task-date"> {{ task.priority }} </td>
+        </tr>
+    </table>
 
     </div>
 

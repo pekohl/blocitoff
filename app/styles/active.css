@@ -3,8 +3,13 @@ table {
 }
 
 tr {
-	height: 4em;
-	text-indent: 2em;
+	height: 3em;
+	text-indent: 1em;
+}
+
+th {
+	height: 1em;
+	text-align: left;
 }
 
 .tasks-active-row {
@@ -13,3 +18,41 @@ tr {
 	padding: 1em;
 }
 
+.tasks-inactive-row {
+	background-color: rgb(241, 241, 241);
+	font-size: 1em;
+	padding: 1em;
+	text-decoration: line-through;
+}
+
+.ion-checkmark {
+	font-size: 1em;
+	text-indent: 1em;
+	width: 10%;
+}
+
+.table-row-labels {
+	height: 1em;
+	font-size: 0.9em;
+}
+
+table tr:nth-child(odd) {
+    background-color: rgba(241, 248, 249,.7);
+}
+table tr:nth-child(even) {
+    background-color: rgba(249, 248, 249,.7);
+
+
+
+
+/*
+ <div class="tasks-active">
+        <table class="tasks-active-table">
+            <tr class="tasks-active-row">
+               <td class="tasks-active-data">
+*/
+
+
+/*<td><label for="EnterNewTask">Enter New Task</label></td>
+<td><input type="text" ng-model="active.tasks" class="form-input" placeholder="Task"> </td>
+<td><button type="submit" class="button" ng-click="active.addTask(input)">Add</button></td>*/

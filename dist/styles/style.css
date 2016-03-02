@@ -37,6 +37,13 @@ tr {
 	text-indent: 2em;
 }
 
+table tr:nth-child(odd) {
+    background-color: rgba(241, 248, 249,.7);
+}
+table tr:nth-child(even) {
+    background-color: rgba(249, 248, 249,.7);
+}
+
 .tasks-active-row {
 	background-color: rgb(241, 241, 241);
 	font-size: 1em;
