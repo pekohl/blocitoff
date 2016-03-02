@@ -1,0 +1,15 @@
+table {
+	width: 100%;
+}
+
+tr {
+	height: 4em;
+	text-indent: 2em;
+}
+
+.tasks-active-row {
+	background-color: rgb(241, 241, 241);
+	font-size: 1em;
+	padding: 1em;
+}
+

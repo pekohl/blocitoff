@@ -1,20 +1,25 @@
-var app = angular.module("BlocItOff", ["firebase"]);
+(function () {
+    'use strict';
+    function config($stateProvider, $locationProvider) {
+        $locationProvider
+            .html5Mode({
+                enabled: true,
+                requireBase: false
+            });
 
-(function() {
-     function config($stateProvider, $locationProvider) {
-         $locationProvider
-         .html5Mode({
-             enabled: true,
-             requireBase: false
-         });
-         $stateProvider
-         .state('main', {
-                 url: '/main',
-                 controller: 'MainCtrl as main',
-                 templateUrl: '/templates/main.html'
-         });
-     }
+        $stateProvider
+            .state('active', {
+                url: '/active',
+                controller: 'ActiveCtrl as active',
+                templateUrl: '/templates/active.html'
+            })
+            .state('inactive', {
+                url: '/inactive',
+                controller: 'InactiveCtrl as inactive',
+                templateUrl: '/templates/inactive.html'
+            });
+    }
     angular
-        .module('BlocItOff', ['ui.router'], ["firebase"])
+        .module('BlocItOff', ['ui.router', 'firebase'])
         .config(config);
- })();
+})();
