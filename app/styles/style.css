@@ -21,11 +21,11 @@ html, body {
 .box {
     vertical-align: middle;
     background-color: lightgray;
-    position: fixed; /* or absolute */
-    left: 50%; /* top left corner will be in middle of page*/
+    position: fixed;
+    left: 50%;
     min-height: 500px;
     width: 600px;
-    margin-left: -300px; /* half the width, minus means moved to left */
+    margin-left: -300px;
 }
 
 table {
@@ -48,11 +48,13 @@ table tr:nth-child(even) {
     background-color: rgba(249, 248, 249,.7);
 }
 
+/*
 .tasks-active-row {
 	background-color: rgb(241, 241, 241);
 	font-size: 1em;
 	padding: 1em;
 }
+*/
 
 .task-entry {
 	width: 100%;
@@ -84,28 +86,32 @@ table tr:nth-child(even) {
 	color: rgb(241, 241, 241);
 	cursor: pointer;
 	text-align: center;
-	width: 24%;
+	width: 25%;
+    display: inline-block;
 }
 
 .priority-levels {
-	width: 25%;
-	position: relative;
-	margin-right: 0.1em;
+	width: 24%;
     float: left;
 	height: 3em;
-	background-color: rgb(56, 56, 55);
+	background-color: rgb(241, 241, 241);
 	border: none;
-	color: rgb(241, 241, 241);
+	color: rgb(56, 56, 55);
 	cursor: pointer;
 	text-align: center;
+    display: inline-block;
 
 }
 
+/*
 .form-input {
 	background-color: rgb(241, 241, 241);
 
 }
+*/
 
+/*
 .enter-new-task {
 	background-color: rgb(241, 241, 241);
 }
+*/
