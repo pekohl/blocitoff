@@ -5,16 +5,21 @@
 
 		var rootRef = new Firebase("https://pk-bloc-it-off.firebaseio.com/");
 
+
 		$scope.tasks = $firebaseArray(rootRef);
-//        $scope.newTask = {};
-//        $scope.currentTask = null;
+
+
 
         $scope.addTask = function () {
+            var now = new Date();
             $scope.tasks.$add({
                 text: $scope.newTaskText,
-                priority: $scope.newTaskPriority
+                priority: $scope.newTaskPriority,
+                date: now.toUTCString()
             });
         };
+
+
 
 //        var getTasks = function() {
 //            return tasks;
