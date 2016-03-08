@@ -3,20 +3,39 @@
 
 	function ActiveCtrl($scope, $firebaseArray) {
 
-		var rootRef = new Firebase("https://pk-bloc-it-off.firebaseio.com/");
+		var taskRef = new Firebase("https://pk-bloc-it-off.firebaseio.com/");
 
 
-		$scope.tasks = $firebaseArray(rootRef);
-
+		$scope.tasks = $firebaseArray(taskRef);
+        $scope.taskCreateDate = new Date();
+        $scope.taskCompleted = false;
 
 
         $scope.addTask = function () {
-            var now = new Date();
             $scope.tasks.$add({
                 text: $scope.newTaskText,
                 priority: $scope.newTaskPriority,
-                date: now.toUTCString()
+                created: Firebase.ServerValue.TIMESTAMP,
+                status: 'active',
+                completed: $scope.taskCompleted
             });
+        };
+
+        $scope.elapsedTime = function(currentTask) {
+            var daysLeft = (7 - (Date.now() - currentTask.created)/86400000).toPrecision(2);
+            if (daysLeft > 0) {
+                return daysLeft;
+            } else {
+                tasksRef.child(currentTask.$id).update({status: 'expired'});
+                tasksRef.child(currentTask.$id).update({expired: true});
+                return 0
+            };
+        };
+
+        $scope.completeTask = function(task) {
+            if (task.status) {
+                tasksRef.child(task.$id).update({status: 'complete'});
+            };
         };
 
 
