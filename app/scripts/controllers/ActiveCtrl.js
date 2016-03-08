@@ -8,7 +8,7 @@
 
 		$scope.tasks = $firebaseArray(taskRef);
         $scope.taskCreateDate = new Date();
-        $scope.taskCompleted = false;
+//        $scope.taskCompleted = false;
 
 
         $scope.addTask = function () {
@@ -17,7 +17,7 @@
                 priority: $scope.newTaskPriority,
                 created: Firebase.ServerValue.TIMESTAMP,
                 status: 'active',
-                completed: $scope.taskCompleted
+                completed: 'false'
             });
         };
 
@@ -26,15 +26,15 @@
             if (daysLeft > 0) {
                 return daysLeft;
             } else {
-                tasksRef.child(currentTask.$id).update({status: 'expired'});
-                tasksRef.child(currentTask.$id).update({expired: true});
+                taskRef.child(currentTask.$id).update({status: 'expired'});
+                taskRef.child(currentTask.$id).update({expired: true});
                 return 0
             };
         };
 
         $scope.completeTask = function(task) {
             if (task.status) {
-                tasksRef.child(task.$id).update({status: 'complete'});
+                taskRef.child(task.$id).update({status: 'complete'});
             };
         };
 

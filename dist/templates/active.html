@@ -22,10 +22,16 @@
         <tr id="table-header">
             <th>Task</th>
             <th>Priority</th>
+            <th>Days Left</th>
+            <th>Task Status</th>
+            <th>Completed</th>
         </tr>
-        <tr ng-repeat="task in tasks">
+        <tr ng-repeat="task in tasks" ng-hide="task.expired || task.status == 'complete'">
             <td> {{ task.text }} </td>
             <td id="task-priority"> {{ task.priority }} </td>
+            <td> {{ elapsedTime(task) }} </td>
+            <td> {{ task.status }} </td>
+            <td><input type="checkbox" ng-model='task.status' ng-click='completeTask(task)'></td>
         </tr>
     </table>
 
