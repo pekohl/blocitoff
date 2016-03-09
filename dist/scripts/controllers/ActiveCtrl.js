@@ -37,33 +37,6 @@
         };
 
 
-
-//        var getTasks = function() {
-//            return tasks;
-//        };
-//
-//        var addTask = function(task) {
-//            items.$add(item);
-//        };
-//
-//        var updateTask = function(id){
-//            tasks.$save(id);
-//        };
-//
-//        var removeTask = function (id){
-//            tasks.remove(id);
-//        };
-
-//        function addTask() {
-//			var now = new Date();
-//
-//			$scope.newTask.ts = now.toUTCString();
-//			$scope.newTask.completed = false;
-//
-//			$scope.tasks.$add($scope.newTask);
-//			$scope.newTask = {};
-//		}
-
 	}
 
     angular
