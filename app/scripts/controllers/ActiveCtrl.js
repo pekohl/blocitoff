@@ -7,8 +7,6 @@
 
 
 		$scope.tasks = $firebaseArray(taskRef);
-        $scope.taskCreateDate = new Date();
-//        $scope.taskCompleted = false;
 
 
         $scope.addTask = function () {

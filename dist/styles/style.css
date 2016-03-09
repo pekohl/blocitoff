@@ -9,15 +9,6 @@ header h1 {
 	font-size: 2em;
 }
 
-/*
-html, body {
-	font-family: 'Open Sans';
-	background-color: rgb(215, 216, 215);
-	margin: 0;
-	padding: 0;
-}
-*/
-
 .box {
     vertical-align: middle;
     background-color: lightgray;
@@ -48,16 +39,13 @@ table tr:nth-child(even) {
     background-color: rgba(249, 248, 249,.7);
 }
 
-/*
-.tasks-active-row {
-	background-color: rgb(241, 241, 241);
-	font-size: 1em;
-	padding: 1em;
-}
-*/
 
 .task-entry {
 	width: 100%;
+}
+
+#activeTasks {
+    max-height: 100px;
 }
 
 .form-input-description {
@@ -103,15 +91,3 @@ table tr:nth-child(even) {
 
 }
 
-/*
-.form-input {
-	background-color: rgb(241, 241, 241);
-
-}
-*/
-
-/*
-.enter-new-task {
-	background-color: rgb(241, 241, 241);
-}
-*/
