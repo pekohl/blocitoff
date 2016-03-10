@@ -12,11 +12,11 @@ header h1 {
 .box {
     vertical-align: middle;
     background-color: lightgray;
-    position: fixed;
-    left: 50%;
+    position: relative;
+    left: 20%;
     min-height: 500px;
     width: 600px;
-    margin-left: -300px;
+/*    margin-left: -300px;*/
 }
 
 table {
@@ -25,11 +25,11 @@ table {
 
 tr {
 	height: 3em;
-	text-indent: 2em;
+	text-indent: 1em;
 }
 
 td {
-	width: 50%;
+	width: 30%;
 }
 
 table tr:nth-child(odd) {
