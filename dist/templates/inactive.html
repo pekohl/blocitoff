@@ -11,13 +11,7 @@
                 <th>Task Status</th>
                 <th>Completed</th>
             </tr>
-<!--
-            <tr class="tasks-inactive-row" ng-repeat="task in inactive.tasks">
-                <td class="tasks-active-data"> {{task.description | json }}     </td>
-                <th>task</th>
-                <th>priority</th>
-            </tr>
--->
+
             <tr ng-repeat="task in tasks" ng-hide="task.status == 'active'">
                 <td> {{ task.text }} </td>
                 <td id="task-priority"> {{ task.priority }} </td>
