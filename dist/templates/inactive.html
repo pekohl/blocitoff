@@ -11,7 +11,7 @@
                 <th>Priority</th>
                 <th>Days Left</th>
                 <th>Task Status</th>
-                <th>Completed</th>
+<!--                <th>Completed</th>-->
             </tr>
 
             <tr ng-repeat="task in tasks" ng-hide="task.status == 'active'">
@@ -19,19 +19,8 @@
                 <td id="task-priority"> {{ task.priority }} </td>
                 <td> {{ elapsedTime(task) }} </td>
                 <td> {{ task.status }} </td>
-                <td><input type="checkbox" ng-model='task.status' ng-click='completeTask(task)'></td>
+<!--                <td><input type="checkbox" ng-model='task.status' ng-click='completeTask(task)'></td>-->
             </tr>
         </table>
     </div>
 </section>
-
-
-
-
-<!--table row with button to remove task
-
-<tr ng-repeat="message in messages">
-    {{ task.value }}: {{ task.priority }}
-    <button ng-click="messages.$remove(message)">x</button>
-</tr>
--->
