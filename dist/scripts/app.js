@@ -20,6 +20,6 @@
             });
     }
     angular
-        .module('BlocItOff', ['ui.router', 'firebase'])
+        .module('BlocItOff', ['ui.router', 'firebase', 'ngMaterial'])
         .config(config);
 })();

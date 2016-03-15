@@ -1,13 +1,25 @@
 <!DOCTYPE html>
 <h1>Active Tasks</h1>
+<!-- Material Buttons -->
+<md-content class="mdNavButtons">
+    <section layout="row" layout-sm="column" layout-align="space-around center" layout-wrap="">
+        <md-button ui-sref="active" target="_blank">Active Tasks</md-button>
+        <md-button class="md-primary" ui-sref="inactive" target="_blank">Inactive Tasks</md-button>
+    </section>
+</md-content>
+
+
+<!-- Basic Links
 <a ui-sref="active">Active Tasks</a>
 <a ui-sref="inactive">History</a>
+-->
 
-<section class="task-entry">
+
+<section class="task-entry" ng-controller="ActiveCtrl as active">
         <form name="taskForm" ng-submit="addTask()">
             <div class="add-task-form">
                 <div >
-                    <input type="text"  ng-model="newTaskText" class="form-input-description" placeholder="Enter New Task" required/>
+                    <input type="text" ng-model="newTaskText" class="form-input-description" placeholder="Enter New Task" required/>
                     <select class="priority-levels" ng-model="newTaskPriority">
                         <option value="" disabled selected>Select Priority</option>
                         <option value="High">High</option>
@@ -35,10 +47,12 @@
                 <td id="task-priority"> {{ task.priority }} </td>
                 <td> {{ elapsedTime(task) }} </td>
                 <td> {{ task.status }} </td>
-                <td><input type="checkbox" ng-model='task.status' ng-click='completeTask(task)'></td>
+                <td><input type="checkbox" ng-model="task.status" ng-click="completeTask(task)"></td>
             </tr>
         </table>
 
     </div>
 
 </section>
+
+
